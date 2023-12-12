@@ -3,7 +3,7 @@
  * Keys in this definition are unique values, used to obtain an associated value
  * 
  */
-public abstract class MapADT<K, V> {
+public interface Map<K, V> {
 
 	/**
 	 * Should return the value associated with the Key k, or null if no k exists within the structure
@@ -11,5 +11,9 @@ public abstract class MapADT<K, V> {
 	 * @returns the value associated with k (or null if k does not exist)
 	 */
 	public abstract V get(K k);
+
 	public abstract void put(K k, V v);
+
+	public abstract V remove(K k);
+
 }
